@@ -25,6 +25,7 @@ public class MP3Player {
          * Make the play list.
          */
         PlayList pl = new PlayList(new SourceHandle(args)) ;
+        Scanner scan=new Scanner(System.in);
 
         /*
          * Command loop.
@@ -32,7 +33,7 @@ public class MP3Player {
          */
         char command = ' ' ;
         while( command != 'q' ) {
-            String s = System.console().readLine() + " " ;
+            String s = scan.nextLine() + " " ;
             command = s.charAt(0) ;
 
             if( command == '+' ) {
